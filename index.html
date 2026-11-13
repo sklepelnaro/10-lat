@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pl">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Świętuj z nami 10 lat Elnaro! Konkursy, wyjątkowe rabaty i prezenty za zakupy.">
+  <title>10 lat Elnaro – świętuj z nami!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{--red:#e30620;--red-dark:#c9001a;--ink:#171717;--muted:#666;--line:#e8e8e8;--soft:#f6f5f2}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--soft);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit}
+    a:focus-visible{outline:3px solid #0876ce;outline-offset:4px;border-radius:3px}
+    .page{max-width:1180px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 35px #00000008}
+    header{min-height:78px;padding:15px 6.5%;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #f0f0f0}
+    .logo{font-size:30px;font-weight:800;letter-spacing:-2px;text-decoration:none;color:#555;line-height:1;white-space:nowrap}
+    
+    /* Poprawiony CSS dla logo, żeby nie psuł układu */
+    .logo img{display:block; max-width:600px; height:125px; object-fit:contain; object-position:left center}
+    
+    .header-link{font-size:13px;color:var(--red);font-weight:700;text-decoration:none;text-align:right}
+    .hero{padding:66px 7% 58px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;overflow:hidden}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--red);font-family:"Montserrat",sans-serif;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin:0}
+    .eyebrow:before{content:"";width:34px;height:2px;background:var(--red)}
+    h1{font-family:"Montserrat",sans-serif;font-size:clamp(38px,5vw,66px);line-height:.99;letter-spacing:-2.8px;margin:19px 0 20px;font-weight:800}
+    h1 em{font-style:normal;color:var(--red)}
+    .hero-copy>p:not(.eyebrow):not(.actions){font-size:17px;color:#4e4e4e;max-width:530px;margin:0 0 28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:0 23px;border-radius:30px;background:var(--red);color:#fff;text-decoration:none;font-size:13px;font-weight:800;transition:background .2s,transform .2s}
+    .btn:hover{background:var(--red-dark);transform:translateY(-1px)}
+    .btn-outline{background:#fff;color:var(--ink);border:1px solid #ccc}
+    .btn-outline:hover{background:#f7f7f7;color:var(--ink)}
+    .hero-art{min-height:315px;display:flex;align-items:center;justify-content:center}
+    .anniversary{display:block;width:min(100%,410px);aspect-ratio:1.15;border-radius:8px;object-fit:cover}
+    .datebar{text-align:center; font-size:32px; font-weight:900; color:var(--red); margin:30px 7% 10px; letter-spacing:1px; border-top:1px solid black; border-bottom:1px solid black; padding:15px 0}
+    .datebar strong{color:#a34d08}
+    .section{padding:67px 7% 18px}
+    .section-head{max-width:670px;margin-bottom:30px}
+    .kicker{font-family:"Montserrat",sans-serif;font-size:11px;color:var(--red);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin:0}
+    h2{font-size:clamp(30px,3.3vw,42px);line-height:1.16;letter-spacing:-1px;margin:9px 0 18px;text-align:left;padding-bottom:14px;border-bottom:1px solid var(--line)}
+    .section-head>p:last-child{margin:0;color:var(--muted);font-size:15px}
+    .promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .promo-card{border:1px solid var(--line);border-radius:7px;padding:25px 23px 24px;min-height:280px;display:flex;flex-direction:column;background:#fff}
+    .promo-gift{border:1px solid #16845b;background:#f3fbf7}
+    .promo-gift .card-no{color:#16845b}
+    .promo-discount{border:1px solid #b45d00;background:#fff9f1}
+    .promo-discount .card-no{color:#b45d00}
+    .promo-contest{border:1px solid #1877f2;background:#f5f9ff}
+    .promo-contest .card-no{color:#1877f2}
+    .card-no{font-size:12px;color:#aaa;font-weight:800;letter-spacing:1px;margin:0}
+    .promo-card h3{font-size:22px;line-height:1.25;margin:0 0 14px;letter-spacing:-.3px;text-align:left;padding-bottom:12px;border-bottom:1px solid var(--line); margin-top:22px}
+    .promo-card>p:not(.card-no){font-size:14px;color:var(--muted);margin:0 0 17px}
+    .card-link{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;min-height:43px;padding:9px 17px;border:2px solid #106c49;border-radius:30px;background:#e4f5eb;color:#106c49;font-size:13px;font-weight:800;text-decoration:none;text-align:center;transition:background .2s,transform .2s}
+    .card-link:hover{background:#d5efdf;transform:translateY(-1px)}
+    .card-link:focus-visible{outline:3px solid #0876ce;outline-offset:4px}
+    .promo-discount .card-link{background:#ffefd9;border-color:#904900;color:#904900}
+    .promo-discount .card-link:hover{background:#ffe4bf}
+    .promo-contest .card-link{background:#e7f1ff;border-color:#1464cc;color:#1464cc}
+    .promo-contest .card-link:hover{background:#d7e7ff}
+    .card-link:after{content:" →";font-size:17px;margin-left:4px}
+    .detail{padding:64px 7% 20px}
+    .detail-top{margin-bottom:22px}
+    .detail-top p:not(.kicker){max-width:670px;color:var(--muted);font-size:15px;margin:0}
+    .discount-panel{margin:27px 0 0}
+    .discount-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+    .discount-option{border:1px solid var(--line);border-radius:6px;padding:20px 12px;text-align:center;background:#fff}
+    .discount-option h3{font-size:12px;color:#777;font-weight:700;margin:0}
+    .discount-threshold{font-size:26px;line-height:1.2;font-weight:900;letter-spacing:-1px;margin:7px 0;color:var(--ink)}
+    .discount-badge{display:block;color:var(--red);font-size:18px;font-weight:800}
+    .discount-option p{font-size:12px;color:var(--muted);margin:0}
+    .note{padding:17px 22px;background:#fafafa;border-top:1px solid var(--line);font-size:12px;color:#666;margin:0}
+    .note strong{color:#222}
+    .gift-intro{display:flex;align-items:center;gap:18px;margin-bottom:19px}
+    .gift-intro p{font-size:14px;color:var(--muted);margin:0}
+    .gifts{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:27px 0 0;padding:0;list-style:none}
+    .gift{border:1px solid var(--line);border-radius:6px;padding:20px 12px;text-align:center;background:#fff}
+    .gift .from{font-size:12px;color:#777;font-weight:700}
+    .gift .amount{font-size:26px;line-height:1.2;font-weight:900;letter-spacing:-1px;margin:7px 0;color:var(--ink)}
+    .gift .price{font-size:12px;color:#666}
+    .gift .price strong{color:var(--red);font-size:18px}
+    .gift-note{margin-top:14px;border:1px solid var(--line);border-radius:5px}
+    #prezenty .kicker,#prezenty .gift .price strong{color:#16845b}
+    #prezenty .gift{border-color:#16845b;background:#f3fbf7}
+    #prezenty .gift-note{border-color:#16845b;background:#f3fbf7}
+    #rabaty .kicker{color:#b45d00}
+    #rabaty .discount-option{border-color:#b45d00;background:#fff9f1}
+    #rabaty .discount-badge{color:#b45d00}
+    #rabaty .discount-note{margin-top:14px;border:1px solid #b45d00;border-radius:5px;background:#fff9f1}
+    #konkursy .kicker{color:#1877f2}
+    #konkursy .facebook-panel{border-color:#1877f2;background:#f5f9ff}
+    #konkursy .btn{background:#1877f2}
+    #konkursy .btn:hover{background:#1464cc}
+    .facebook-panel{border:1px solid var(--line);border-radius:8px;padding:26px;display:flex;align-items:center;gap:24px;background:#fafafa}
+    .facebook-mark{width:58px;height:58px;flex:none}
+    .facebook-mark img{display:block;width:58px;height:58px;object-fit:cover;border-radius:8px}
+    .facebook-panel h3{margin:0 0 5px;font-size:19px}.facebook-panel p{margin:0;color:var(--muted);font-size:14px}.facebook-panel .btn{margin-left:auto;flex:none}
+    .terms{padding:57px 7% 65px}
+    .terms h2{font-size:22px}
+    .terms-box{background:#fafafa;border:1px solid var(--line);border-radius:6px;padding:20px 23px;color:#666;font-size:12px}
+    .terms-box ul{margin:0;padding-left:18px}
+    .terms-box li+li{margin-top:7px}
+    footer{border-top:1px solid #ddd;padding:28px 7%;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#777;font-size:12px}
+    footer p{margin:0}
+    footer a:not(.logo){color:var(--red);text-decoration:none;font-weight:700}
+    @media(max-width:760px){
+      header{min-height:66px;padding:12px 5%}.logo{font-size:26px}
+      .hero{padding:45px 6% 35px;grid-template-columns:1fr;gap:25px}
+      .hero-art{min-height:230px}.anniversary{max-width:340px}
+      .datebar{margin:20px 5% 10px; font-size:22px}
+      .section,.detail{padding:48px 6% 10px}
+      .promo-grid{grid-template-columns:1fr}.promo-card{min-height:0}
+      .discount-row{grid-template-columns:repeat(2,1fr)}.discount-option:last-child{grid-column:1/-1}
+      .gifts{grid-template-columns:repeat(2,1fr)}.gift:last-child{grid-column:1/-1}
+      .facebook-panel{flex-direction:column;align-items:flex-start;padding:22px}.facebook-panel .btn{margin-left:0}
+      .terms{padding:45px 6%}.terms-box{padding:17px}
+      footer{padding:24px 6%;flex-direction:column;align-items:flex-start}
+    }
+    @media(min-width:761px) and (max-width:980px){
+      .promo-grid{grid-template-columns:repeat(2,1fr)}
+      .discount-row{grid-template-columns:repeat(3,1fr)}
+      .gifts{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+ </head>
+ <body>
+  <div class="page">
+   <header class="canva-header">
+    
+    <!-- ========================================================= -->
+    <!-- 1. TUTAJ WKLEJ LINK DO LOGO -->
+    <!-- Podmień tekst LINK_DO_TWOJEGO_LOGA.png na faktyczny link -->
+    <!-- ========================================================= -->
+    <a id="header-logo" class="logo canva-link" href="https://elnaro.pl/" target="_blank" rel="noopener noreferrer" aria-label="Elnaro – strona główna">
+     <img id="header-logo-image" class="canva-image" src="https://elnaro.pl/img/cms/logo 10 lat.png" alt="Logo Elnaro" loading="lazy">
+    </a>
+
+   </header>
+   <main>
+    <section class="hero canva-section">
+     <div class="hero-copy">
+      <p class="eyebrow canva-text">10 lat razem</p>
+      <h1>Świętuj z nami<br><em>10 lat Elnaro!</em></h1>
+      <p>Od dekady dostarczamy narzędzia, które zamieniają Wasze plany w rzeczywistość. Z tej okazji przygotowaliśmy wyjątkowe niespodzianki. Dołącz do świętowania i odbieraj prezenty: zgarniaj darmowe narzędzia w zestawach, łap rabaty lojalnościowe i baw się z nami w urodzinowych konkursach!</p>
+      <p class="actions"><a class="btn canva-button" href="#promocje">Poznaj promocje</a> <a class="btn btn-outline canva-button" href="https://elnaro.pl/" target="_blank" rel="noopener noreferrer">Odwiedź sklep</a></p>
+     </div>
+     <div class="hero-art">
+
+      <!-- ========================================================= -->
+      <!-- 2. TUTAJ WKLEJ LINK DO GŁÓWNEJ GRAFIKI -->
+      <!-- Podmień tekst LINK_DO_GLOWNEJ_GRAFIKI.jpg na faktyczny link -->
+      <!-- ========================================================= -->
+      <img id="anniversary-graphic" class="anniversary canva-image" src="https://elnaro.pl/img/cms/Gemini_Generated_Image_7emyv67emyv67emy.jpg" alt="Grafika jubileuszowa Elnaro" loading="lazy">
+
+     </div>
+    </section>
+    <div class="datebar canva-banner"><span>Świętujemy 16.11.2016 - 24.01.2027</span>
+    </div>
+    <section class="section canva-section" id="promocje">
+     <div class="section-head">
+      <p class="kicker canva-text">Urodzinowe niespodzianki</p>
+      <h2>Trzy sposoby na świętowanie</h2>
+      <p>Dołącz do zabawy, zrób zakupy i skorzystaj z przygotowanych przez nas urodzinowych okazji.</p>
+     </div>
+     <div class="promo-grid">
+      <article id="promo-prezenty" class="promo-card promo-gift canva-card">
+       <p class="card-no canva-tag">01 / PREZENTY</p>
+       <h3>Zestaw z narzędziem gratis</h3>
+       <p>Zrób zakupy za wskazaną kwotę, a do zamówienia dołożymy narzędzie gratis jako część zestawu promocyjnego.</p><a class="card-link canva-button" href="#prezenty">Zobacz, jak to działa</a>
+      </article>
+      <article id="promo-rabaty" class="promo-card promo-discount canva-card">
+       <p class="card-no canva-tag">02 / RABATY</p>
+       <h3>Rabaty dla stałych klientów</h3>
+       <p>Im większe zakupy, tym korzystniejszy rabat dla stałych klientów. Sprawdź, jaki próg obejmuje Twoje zamówienie.</p><a class="card-link canva-button" href="#rabaty">Poznaj progi rabatowe</a>
+      </article>
+      <article id="promo-konkursy" class="promo-card promo-contest canva-card">
+       <p class="card-no canva-tag">03 / KONKURSY</p>
+       <h3>Poniedziałek? Czas na konkurs!</h3>
+       <p>Co tydzień na naszym Facebooku pojawi się nowe zadanie konkursowe. Podejmij wyzwanie i zgarnij gadżety od Elnaro!</p><a class="card-link canva-button" href="#konkursy">Sprawdź konkursy</a>
+      </article>
+     </div>
+    </section>
+    <section class="detail canva-section" id="prezenty">
+     <p class="kicker canva-text">01 / PREZENTY</p>
+     <h2>Twoje zakupy + narzędzie gratis</h2>
+     <div class="gift-intro">
+      <p>Zrób zakupy za wybraną kwotę, a do Twojego zamówienia dołożymy narzędzie gratis. <strong>Produkty i gratis tworzą jeden zestaw promocyjny</strong> - nie są osobnymi promocjami.</p>
+     </div>
+     <ul class="gifts canva-list">
+      <li class="gift canva-card">
+       <div class="from">Zakupy od</div>
+       <div class="amount">200 zł</div>
+       <div class="price">Narzędzie <strong>gratis</strong></div></li>
+      <li class="gift canva-card">
+       <div class="from">Zakupy od</div>
+       <div class="amount">500 zł</div>
+       <div class="price">Narzędzie <strong>gratis</strong></div></li>
+      <li class="gift canva-card">
+       <div class="from">Zakupy od</div>
+       <div class="amount">1000 zł</div>
+       <div class="price">Narzędzie <strong>gratis</strong></div></li>
+      <li class="gift canva-card">
+       <div class="from">Zakupy od</div>
+       <div class="amount">1500 zł</div>
+       <div class="price">Narzędzie <strong>gratis</strong></div></li>
+      <li class="gift canva-card">
+       <div class="from">Zakupy od</div>
+       <div class="amount">2000 zł</div>
+       <div class="price">Narzędzie <strong>gratis</strong></div></li>
+     </ul>
+     <p class="note gift-note canva-text"><strong>Ważne przy zwrocie:</strong> zakupy i narzędzie gratis stanowią jeden zestaw promocyjny. W razie odstąpienia od zakupu zestawu zwróć cały zestaw, łącznie z gratisem. Nie można zwrócić zakupionych produktów i zatrzymać bezpłatnego narzędzia. Promocja łączy się z rabatami dla stałych klientów. Szczegóły oraz prawa wynikające z obowiązujących przepisów określa regulamin promocji.</p>
+    </section>
+    <section class="detail canva-section" id="rabaty">
+     <div class="detail-top">
+      <p class="kicker canva-text">02 / RABATY</p>
+      <h2>Większe zakupy. Większy rabat.</h2>
+      <p>Skorzystaj z rabatów dla stałych klientów. Wybierz próg odpowiadający wartości Twojego zamówienia.</p>
+     </div>
+     <div class="discount-panel canva-panel">
+      <div class="discount-row">
+       <div class="discount-option canva-card">
+        <h3>Zakupy powyżej</h3>
+        <div class="discount-threshold">200 zł</div><span class="discount-badge canva-tag">1% rabatu</span>
+       </div>
+       <div class="discount-option canva-card">
+        <h3>Zakupy powyżej</h3>
+        <div class="discount-threshold">500 zł</div><span class="discount-badge canva-tag">2% rabatu</span>
+       </div>
+       <div class="discount-option canva-card">
+        <h3>Zakupy powyżej</h3>
+        <div class="discount-threshold">1000 zł</div><span class="discount-badge canva-tag">3% rabatu</span>
+       </div>
+       <div class="discount-option canva-card">
+        <h3>Zakupy powyżej</h3>
+        <div class="discount-threshold">1500 zł</div><span class="discount-badge canva-tag">4% rabatu</span>
+       </div>
+       <div class="discount-option canva-card">
+        <h3>Zakupy powyżej</h3>
+        <div class="discount-threshold">2000 zł</div><span class="discount-badge canva-tag">5% rabatu</span>
+       </div>
+      </div>
+     </div>
+     <p class="note discount-note canva-text"><strong>Ważne:</strong> Podane kwoty są kwotami brutto. Progi oznaczają wartość zamówienia powyżej wskazanej kwoty. Powyższe rabaty łączą się z zestawamu promocyjnymi.</p>
+    </section>
+    <section class="detail canva-section" id="konkursy">
+     <div class="detail-top">
+      <p class="kicker canva-text">03 / KONKURSY NA FACEBOOKU</p>
+      <h2>Poniedziałek? Czas na konkurs!</h2>
+      <p>Co tydzień na naszym Facebooku pojawi się nowe zadanie konkursowe. Podejmij wyzwanie i zgarnij gadżety od Elnaro!</p>
+     </div>
+     <div class="facebook-panel canva-panel">
+      <div class="facebook-mark">
+
+       <!-- ========================================================= -->
+       <!-- 3. TUTAJ WKLEJ LINK DO IKONY FB / MINIATURKI -->
+       <!-- Podmień tekst LINK_DO_IKONY_FB.jpg na faktyczny link -->
+       <!-- ========================================================= -->
+       <img id="facebook-graphic" class="canva-image" src="https://elnaro.pl/img/cms/Projekt bez nazwy (69).png" alt="Grafika konkursów na Facebooku" loading="lazy">
+
+      </div>
+      <div>
+       <h3>Dołącz do zabawy na Facebooku</h3>
+       <p>Śledź profil Elnaro, żeby nie przegapić kolejnego zadania. Szczegóły i terminy konkursów znajdziesz w postach konkursowych.</p>
+      </div><a class="btn canva-button" href="https://www.facebook.com/search/top?q=elnaro" target="_blank" rel="noopener noreferrer">Sprawdź konkursy</a>
+     </div>
+    </section>
+    <section class="terms canva-section">
+     <p class="kicker canva-text">Warto wiedzieć</p>
+     <h2>Zasady akcji promocyjnych</h2>
+     <div class="terms-box">
+      <ul class="canva-list">
+       <li>Akcje promocyjne obowiązują w terminie od 16.11.2026 r. do 24.01.2027 r., o ile szczegółowe zasady danej akcji nie stanowią inaczej.</li>
+       <li>Rabaty dla stałych klientów: 1% przy zakupach powyżej 200 zł, 2% powyżej 500 zł, 3% powyżej 1000 zł, 4% powyżej 1500 zł oraz 5% powyżej 2000 zł. Progi dotyczą wartości zamówienia brutto.</li>
+       <li>Przy zakupach od 200, 500, 1000, 1500 lub 2000 zł brutto, zależnie od progu, do zamówienia może zostać dołączone narzędzie gratis jako element zestawu promocyjnego; o rodzaju narzędzia decyduje sprzedawca.</li>
+       <li>W przypadku zwrotu zestawu promocyjnego zwracany jest cały zestaw, włącznie z narzędziem gratis. Nie można zachować gratisu po zwrocie zakupionych produktów. Postanowienia promocji nie ograniczają ustawowych praw konsumenta.</li>
+       <li>Konkursy odbywają się na profilu Elnaro na Facebooku. Zwycięzcę każdego zadania wybiera komisja konkursowa. Szczegółowe zasady i terminy będą podawane w postach konkursowych.</li>
+       <li>Szczegóły akcji znajdziesz w regulaminie promocji.</li>
+      </ul>
+     </div>
+    </section>
+   </main>
+  </div>
+ </body>
+</html>
